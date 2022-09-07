@@ -15,7 +15,7 @@ def command_website(message):
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton("Посетить сайт DNS", url='https://www.dns-shop.ru/'))
     markup.add(types.InlineKeyboardButton("Посетить сайт MVideo", url='https://www.mvideo.ru/'))
-    bot.send_message(message.chat.id, "Рекоменуемые сайты:", reply_markup=markup)
+    bot.send_message(message.chat.id, "Рекомендуемые сайты:", reply_markup=markup)
 
 
 @bot.message_handler(commands=['help'])
@@ -44,7 +44,6 @@ def get_user_text(message):
         command_website(message)
     else:
         bot.send_message(message.chat.id, "Не понятен Ваш запрос", parse_mode='html')
-        # bot.send_message(message.chat.id, message, parse_mode='html')
 
 
 @bot.message_handler(content_types=['photo'])
